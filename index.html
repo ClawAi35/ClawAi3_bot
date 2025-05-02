@@ -7,19 +7,8 @@
 </head>
 <body>
     <h1>ClawAi3_Bot'a Hoş Geldin</h1>
-    <p id="status">Bot bağlantısı bekleniyor...</p>
+    <p id="status"></p>
 
-    <script>
-        // Basit domain kontrolü
-        const allowedDomains = ['localhost', 'example.com', 'clawai35.github.io'];
-        const currentDomain = window.location.hostname;
-
-        if (allowedDomains.includes(currentDomain)) {
-            document.getElementById('status').innerText = 'Bot başarıyla bağlandı!';
-            // Buraya bot başlatma kodlarını ekleyebilirsin
-        } else {
-            document.getElementById('status').innerText = 'Geçersiz domain: ' + currentDomain;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
