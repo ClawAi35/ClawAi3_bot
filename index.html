@@ -2,18 +2,24 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>ClawAi3_Bot Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClawAi3_Bot</title>
 </head>
 <body>
     <h1>ClawAi3_Bot'a Hoş Geldin</h1>
+    <p id="status">Bot bağlantısı bekleniyor...</p>
 
-    <script async src="https://telegram.org/js/telegram-widget.js?22"
-        data-telegram-login="ClawAi3_bot"
-        data-size="large"
-        data-userpic="false"
-        data-request-access="write"
-        data-auth-url="https://clawai35.github.io/ClawAi3_bot/"
-    ></script>
+    <script>
+        // Basit domain kontrolü
+        const allowedDomains = ['clawai35.github.io', 'localhost'];
+        const currentDomain = window.location.hostname;
 
+        if (allowedDomains.includes(currentDomain)) {
+            document.getElementById('status').innerText = 'Bot başarıyla bağlandı!';
+            // Buraya bot başlatma kodlarını ekleyebilirsin
+        } else {
+            document.getElementById('status').innerText = 'Geçersiz domain: ' + currentDomain;
+        }
+    </script>
 </body>
 </html>
